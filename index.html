@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+	<title> Train Schedule </title>
+	<!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Added the linke to Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+ 	<!-- 	Added the link to moment.js -->    
+    <script src="http://momentjs.com/downloads/moment.js""></script>
+
+	<!-- Reference to the javascript-->
+	<script type = "text/javascript" src = "assets/javascript/train.js"></script>
+
+	<link rel= "stylesheet" type = "text/css" href = "assets/css/style.css">
+
+</head>
+<body>
+	<div class = "container">
+
+
+		<!-- The JumboTron/Header/Title -->
+		<div class = "row">
+			<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron">
+				<h1> Train Schedules</h1><br>
+				<h3> Dates and Times Below</h3>
+			</div>
+		</div>
+
+
+		<!-- The Table of Trains/Times -->
+		<div class = "row">
+			<div class = "panel panel-success">
+				<div class = "panel-heading"> Upcoming Trains </div>
+
+				<div class = "panel-body">
+					<table class= "table table-striped"> 
+
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (min) </th>
+								<th>Next Arrival</th>
+							</tr>
+						</thead>
+
+						<tbody class = "trainList">
+<!-- s -->
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- The Form for the user's input/search? -->
+		<div class = "row">
+			<div class  = "panel panel-success">
+			 	<div  class = "panel-heading"> Add A Train </div>
+				 	<div class = "panel-body">
+				
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "comment">Train Name</label>
+								<input type = "text" class = "form-control" id = "inputTrainName">
+							</div>
+
+
+							<div class = "form-group">
+								<label for = "comment">Destination</label>
+								<input type = "text" class = "form-control" id = "inputDestination">
+							</div>
+
+
+							<div class = "form-group">
+								<label for = "comment">First Train Time (HH:MM military time)</label>
+								<input type = "text" class = "form-control" id = "inputFirstTrain">
+							</div>
+
+
+
+							<div class = "form-group">
+								<label for = "comment">Frequency (min)</label>
+								<input type = "text" class = "form-control" id = "inputFreqMin">
+							</div>
+							
+							<button class = "btn btn-success pressToSubmit">Add a Train schedule</button>
+<!-- 							<button class = "btn btn-primary pressToEdit">Edit A Train Schedule</button>
+							<button class = "btn btn-success pressToRemove">Remove A Train</button> -->
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
